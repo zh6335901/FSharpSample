@@ -1,0 +1,26 @@
+﻿{
+  "images": [
+    {
+      "startdate": "20160826",
+      "fullstartdate": "201608260700",
+      "enddate": "20160827",
+      "url": "/az/hprichbg/rb/PufferfishNest_EN-US10860680557_1920x1080.jpg",
+      "urlbase": "/az/hprichbg/rb/PufferfishNest_EN-US10860680557",
+      "copyright": "Sand pattern made by a pufferfish near Amami Ōshima, Kagoshima, Japan (© Yoji Okata/Minden Pictures)",
+      "copyrightlink": "http://www.bing.com/search?q=Torquigener+albomaculosus&form=hpcapt&filters=HpDate:%2220160826_0700%22",
+      "wp": true,
+      "hsh": "91acacc9d01c3b057a0d7ba8870d80f4",
+      "drk": 1,
+      "top": 1,
+      "bot": 1,
+      "hs": [ ]
+    }
+  ],
+  "tooltips": {
+    "loading": "Loading...",
+    "previous": "Previous image",
+    "next": "Next image",
+    "walle": "This image is not available to download as wallpaper.",
+    "walls": "Download this image. Use of this image is restricted to wallpaper only."
+  }
+}
