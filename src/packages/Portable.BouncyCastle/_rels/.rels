@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Type="http://schemas.microsoft.com/packaging/2010/07/manifest" Target="/Portable.BouncyCastle.nuspec" Id="Rc54143164df5476a" />
+  <Relationship Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="/package/services/metadata/core-properties/07a15e8711ec4d4ab117043c8547748a.psmdcp" Id="Rf9c4dacdd1234083" />
+</Relationships>
