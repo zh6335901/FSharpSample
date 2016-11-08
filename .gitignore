@@ -176,3 +176,4 @@ Logging/*.log
 # 排除调试辅助文件
 !**/Views/Debug/
 packages
+/src/packages
