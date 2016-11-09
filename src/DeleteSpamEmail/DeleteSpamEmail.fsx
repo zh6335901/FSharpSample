@@ -25,14 +25,16 @@ module MailClient =
         client
 
     let getMessageIds (predicator) (client: Pop3Client) = [ 
-        for i in [0..client.Count] do
+        for i in [0..client.Count-1] do
             let message = client.GetMessage(i)
-            if predicator message.Subject 
-            then yield (sprintf "get message %s \r\n" message.MessageId)
+            match message with
+            | null -> yield None
+            | _ -> if predicator message.Subject then yield Some i else yield None
     ]
 
-    let deleteMessages (client: Pop3Client) (uids: string list) = 
-        client.DeleteMessages(uids.ToList()) |> ignore
+    let deleteMessages (client: Pop3Client) (indexs: int option list) = 
+        let canDeleteIndexs = indexs |> List.choose id
+        client.DeleteMessages(canDeleteIndexs.ToList())
 
 module App =
     open MailClient
@@ -49,14 +51,14 @@ module App =
 
 
 let clientInfo = { Username = "example@123.com"; Password = "123456"; Server = "pop.example.com"; Port = 110 } 
-let result = App.run (fun subject -> subject.Contains("双11")) clientInfo
+
+let mailFilter (keyword: string) (subject: string) = 
+    match subject with
+    | null -> false
+    | _ -> subject.Contains(keyword)
+
+let result = App.run ("双11" |> mailFilter) clientInfo
 
 match result with
 | Success info -> printfn "%s" info
 | IOError ex -> printfn "%s" ex.Message
-
-        
-
-
-
-
